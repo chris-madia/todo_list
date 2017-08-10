@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/public/style.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>List of things to do:</h1>
+		<form action="/" method="post">
+			<input type="text" name="listItem" placeholder="enter task">
+			<input type="submit" value="New Task">
+		</form>
+
+		<div class="listArea">
+			<ul>
+				{{#todos}}
+					<li id="{{itemID}}"> <input type="button" value="Done"> <span>{{.}}</span> </input> </li>
+				{{/todos}}
+			</ul>
+		</div>
+	</div>
+
+</body>
+
+</html>
